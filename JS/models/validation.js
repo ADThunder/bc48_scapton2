@@ -52,6 +52,18 @@ checkDinhDangPass = (idInput, idtb) => {
     return true;
   }
 };
+
+function checkDinhDangTen(idInput, idNoti) {
+  var regrexTen = /^[a-zA-Z'-'\sáàảãạăâắằấầặẵẫậéèẻ ẽẹếềểễệóòỏõọôốồổỗộ ơớờởỡợíìỉĩịđùúủũụưứ� �ửữựÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠ ƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼ� ��ỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞ ỠỢỤỨỪỬỮỰỲỴÝỶỸửữựỵ ýỷỹ]*$/;
+  var valueInput = document.getElementById(idInput).value;
+  if(!regrexTen.test(valueInput) && valueInput !== "") {
+    document.getElementById(idNoti).innerHTML = "vui lòng nhập vô đúng định dạng tên";
+    return false;
+  } else if (regrexTen.test(valueInput) && valueInput !== "") {
+    document.getElementById(idNoti).innerHTML = "";
+    return true
+  }
+};
 checkPassWord = (idtb, password, passwordCf) => {
   var pw = document.getElementById(password).value;
   var checkPw = document.getElementById(passwordCf).value;
@@ -63,3 +75,4 @@ checkPassWord = (idtb, password, passwordCf) => {
     return true;
   }
 };
+
