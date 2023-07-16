@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font gg  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- my css  -->
+<link rel="stylesheet" href="./css/style.css">
+    
+
+</head>
+
+<body>
+  <header>
+    <nav class="bg-dark px-4 ">
+        <div class="d-flex justify-content-between pt-2">
+          <a class="navbar-brand" href="#">
+            <img src="./img/image 3.png" alt="">
+          </a>
+          <ul class="d-flex" >
+            <li class="mx-2">
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping text-white"></i>
+              </a>
+            </li>
+            <li class="mx-2" >
+                <a  class="nav-link text-white" href="#">Login</a>
+            </li>
+            <li class="mx-2" >
+                <a class="nav-link text-white" href="#">Register</a>
+            </li>
+          </ul>
+          </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg ">
+      <ul class="d-inline-block list-unstyled d-flex">
+        <li><a class="nav-link text-dark ms-3" href="#"> Home</a></li>
+        <li><a class="nav-link text-dark ms-3" href="#"> Men</a></li>
+        <li><a class="nav-link text-dark ms-3" href="#"> Woman</a></li>
+        <li><a class="nav-link text-dark ms-3" href="#"> Kid</a></li>
+        <li><a class="nav-link text-dark ms-3" href="#"> Sport</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <h1 class="text-center">Register</h1>
+
+    <!-- Phần Input  -->
+    <form class="container text-center w-75" id="textForm" onsubmit="signUp()">
+        <div class="row">
+            <!-- Email  -->
+            <div class="col-6">
+                <div class="mb-3">
+                  <p id="tbEmail" class="text-danger mb-0 text-start"></p>
+                  <input type="text"
+                    class="form-control" name="" id="email" aria-describedby="helpId" placeholder="Email">
+                </div>
+            </div>
+
+                        <!-- Name  -->
+            <div class="col-6">
+                <div class="mb-3">
+                  <p id="tbName" class="text-danger mb-0 text-start"></p>
+                    <input type="text"
+                      class="form-control" name="" id="name" aria-describedby="helpId" placeholder="Name">
+                </div>
+
+            </div>
+
+            <!-- Pass  -->
+            <div class="col-6">
+                <div class="mb-3">
+                  <p id="tbPassword" class="text-danger mb-0 text-start"></p>
+                    <input type=""
+                      class="form-control" name="" id="password" aria-describedby="helpId" placeholder="Password"> 
+                </div>
+            </div>
+
+                        <!-- Phone  -->
+            <div class="col-6">
+                <div class="mb-3">
+                  <p id="tbPhone" class="text-danger mb-0 text-start"></p>
+                    <input type="text"
+                      class="form-control" name="" id="phone" aria-describedby="helpId" placeholder="Phone">
+                </div>
+            </div>
+
+            <!-- Pass Confirm  -->
+            <div class="col-6">
+                <div class="mb-3">
+                  <p id="tbConfirmPass" class="text-danger mb-0 text-start"></p>
+                    <input type=""
+                      class="form-control" name="" id="ConfirmPass" aria-describedby="helpId" placeholder="Password Confirm">
+                </div>
+            </div>
+
+            <!-- Selector  -->
+            <div class="col-6 d-flex justify-content-evenly" >
+              <p id="tbGender" class="text-danger mb-0 text-start"></p>
+                <span>Gender</span>
+                <div class="form-check" >
+                    <input value="false" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" checked>
+                    <label for="" >Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" value="false" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+                    <label for="">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger" id="dangKy"><span>Submit</span></button>
+            </div>
+        </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container ">
+      <div class="row d-sm-flex">
+        <div class="col-md-4">
+          <div class="footer_list">
+            <h3>GET HELP</h3>
+            <ul class="px-0">
+              <li class="list-unstyled"><a class="nav-link text-dark" href="">Contact Us</a></li>
+              <li class="list-unstyled"><a class="nav-link text-dark" href="">Shopping </a></li>
+              <li class="list-unstyled"><a class="nav-link text-dark" href="">NikeId</a></li>
+              <li class="list-unstyled"><a class="nav-link text-dark" href="">Nike+</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer_list">
+            <h3>ORDERS</h3>
+            <ul class="px-0">
+              <li class="list-unstyled"><a class="nav-link text-dark" href="">Payment options</a></li>
+              <li class="list-unstyled"><a class="nav-link text-dark" href="">Shiping and dilivery </a></li>
+              <li class="list-unstyled"><a class="nav-link text-dark" href="">Returns</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer_list">
+            <h3>REGISTER</h3>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, delectus?</P>
+            <ul class="px-0">
+              <li class="list-unstyled"><a class="nav-link text-danger" href="">Learn more</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer_list">
+            <h3>EMAIL SING UP</h3>
+            <P>Lorem, ipsum dolor sit amet consectetur</P>
+            <ul class="px-0">
+              <li class="list-unstyled"><a class="nav-link text-danger" href="">Sign up now </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer_list">
+            <h3>GIFT CARDS</h3>
+            <P>Lorem, ipsum dolor sit amet </P>
+            <ul class="px-0">
+              <li class="list-unstyled"><a class="nav-link text-danger" href="">View cards</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer_list">
+            <h3>STORES NEAR YOU</h3>
+            <P>Lorem ipsum dolor sit amet, consectetur </P>
+            <ul class="px-0">
+              <li class="list-unstyled"><a class="nav-link text-danger" href="">Search</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div
+      id="liveToast"
+      class="toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-header text-light bg-danger">
+        <strong class="me-auto ">Thông báo</strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="toast-body "></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <!-- axios cdn  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- js  -->
+  <script src="./JS/models/validation.js"></script>
+  <script src="./JS/form.js"></script>
+</body>
+
+</html>
