@@ -1,0 +1,39 @@
+.carousel {
+    background-image: url(./../../img/image\ 6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .item {
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include MediaQuery($xs) {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .item_img {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+            @include MediaQuery ($xs) {
+                width: 100%;
+            }
+        }
+
+        .item_text {
+            @include MediaQuery($xxl) {
+                margin-right: 25px;
+            }
+            @include MediaQuery($md) {
+                margin-left: 20px;
+            }
+
+        }
+    }
+}

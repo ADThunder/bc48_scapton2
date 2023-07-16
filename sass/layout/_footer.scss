@@ -1,0 +1,51 @@
+footer {
+    .container {
+        .row_top {
+            .col-12 {
+                border-right: 1px solid #00000039;
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    li {
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            .col-12:last-child {
+                border: none;
+                a {
+                    text-decoration: none;
+                    color :red;
+                }
+            }
+        }
+    }
+    .row_bottom {
+        margin-top: 10px;
+        padding: 15px;
+        background-color: rgba(128, 128, 128, 0.277);
+        @include MediaQuery($xs) {
+            padding: 0;
+        }
+        .col-12 {
+            border-right: 1px solid #00000039;
+            a {
+                text-decoration: none;
+                color: red;
+            }
+        }
+        .col-12:last-child {
+            border: none;
+        }
+        
+
+    }
+    
+    
+    
+
+}
+
