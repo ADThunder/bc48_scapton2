@@ -7,13 +7,13 @@ postUser = (duLieu) => {
     data: duLieu,
   });
   promise.then((result) => {
-    // console.log(result.data.message);
-    console.log(result)
+    console.log(result.data.message);
+    // console.log(result)
     //dom gửi thông báo lên cho người dùng
-    // document.querySelector(".toast-body").innerHTML = result.data.message;
-    // const toastLiveExample = document.getElementById("liveToast");
-    // const toast = new bootstrap.Toast(toastLiveExample);
-    // toast.show();
+    document.querySelector(".toast-body").innerHTML = result.data.message;
+    const toastLiveExample = document.getElementById("liveToast");
+    const toast = new bootstrap.Toast(toastLiveExample);
+    toast.show();
   });
   promise.catch((err) => {
     // dom gửi thông báo lên cho người dùng
